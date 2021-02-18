@@ -25,7 +25,7 @@ screen.addEventListener('click', function () {
       clearTimeout(timeout);
       screen.classList.remove('ready');
       screen.classList.add('waiting');
-      screen.textContent = '너무 성급하시군요!';
+      screen.textContent = '워워 진정하세요!';
     } else {
       screen.classList.remove('ready');
       screen.classList.add('now');
@@ -34,6 +34,18 @@ screen.addEventListener('click', function () {
   } else if (screen.classList.contains('now')) { // 시작 상태
     overtime = new Date();
     document.getElementById('reaction').innerHTML=('반응속도:' + (overtime - start) + 'ms');
+    if (overtime - start < 100) {
+      alert('당신의 반응속도는 최상위 입니다 당신은 혹시 프로게이머?')
+    }
+    else if (overtime - start < 200) {
+      alert('당신의 반응속도는 상위 입니다 (조금만 더 하면 프로게이머의 반응속도가 가능합니다.')
+    }
+    else if (overtime - start < 250) {
+      alert('당신의 반응속도는 평균 입니다')
+    }
+    else {
+      alert('당신은 아마 손가락 트레이너가 필요합니다')
+    }
     record.push(overtime - start);
     start = null;
     overtime = null;
