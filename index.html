@@ -15,13 +15,9 @@
 	status="마우스오른쪽 클릭금지.";
 	
 	function disableclick(event){
-	
 		if (event.button==2) {
-	
 			alert(status);
-	
 			return false;
-	
 		}
 	
 	}
@@ -129,7 +125,35 @@
             color:white;
             background-color: gray;
         }
-		
+		.footer {
+			font-size: 50px;
+			color: grey;
+			padding-bottom: 10px;
+			padding-top: 20px;
+			background-color: none;
+			display:  flex;
+			justify-content: center;
+			align-items: center;
+			user-select: none;
+		}
+		@-webkit-keyframes rainbow {
+		0% {color:#B85656;}
+		9%{color:#C2795F;}
+		18%{color:#CCC166;}
+		27%{color:#8CB85A;}
+		36%{color:#5CC75C;}
+		45%{color:#58BA86;}
+		54%{color:#609ABF;}
+		63%{color:#5A6CBA;}
+		72%{color:#7858B3;}
+		81%{color:#B461BA;}
+		90%{color:#BA5D8C;}
+		100%{color:#B55D7E;}
+		}
+		a:hover {
+			-webkit-animation: rainbow infinite 5s;
+		}
+	
 	</style>
 	</div>
 		<div class="atag">
@@ -145,6 +169,13 @@
 	<h5 class="sdms-font">Made by 효모</h5>
 	<p class="light"></p>
 	<p class="dark">Dark Mode가 활성화 중입니다 다크모드 끄기가 작동하지 않습니다</p>
+	<footer>
+		<div class="footer">
+			<blockquote>
+				<a class="r" target="_blank">Reaction Speed Test</a>
+			</blockquote>
+		</div>
+	</footer>
 </div>
 </body>
 </html>
