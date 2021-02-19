@@ -4,15 +4,26 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>당신의 반응속도는?</title>
-	
+	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
 </head>
 <body>
 	<div>
 	<div id="screen" class="waiting">클릭해서 시작하세요.</div>
 	<script src="Reaction.js"></script>
-	<p>오류가 뜬다면 F12를 눌러 콘솔창에서 속도 측정이 가능하다</p>
-	<p id="reaction"></p>
+	<h2 id="reaction"class="sdms-font">[반응속도: ]</h2>
+	<h2 ></h2>
+	
 	<style>
+		@font-face {
+		font-family: 'BMEuljiro10yearslater';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-10-21@1.0/BMEuljiro10yearslater.woff') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		}
+		.sdms-font{
+		font-family: 'BMEuljiro10yearslater', sans-serif;/*웹 폰트 지정*/
+		}
+
 		#screen {
 			width: 1000px;
 			height: 200px;
@@ -40,19 +51,25 @@
 			user-select: none;
 		}
 		h2 {
-			text-align: right;
+			text-align: center;
 			user-select: none;
 		}
 		.atag {
 			text-align: center;
 		}
+		.made {
+			text-align: center; 
+			vertical-align: bottom;
+		}
 	</style>
 	</div>
 		<div class="atag">
 			<a onClick="window.location.reload()" style="cursor: pointer;">
-				<img src="reset.png" />
+				<img src="img/reset.png" />
 				</a>
 		</div>
-	
+		<div class="made">
+	<h5 class="sdms-font">Made by 효모</h5>
+</div>
 </body>
 </html>
