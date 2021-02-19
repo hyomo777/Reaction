@@ -5,8 +5,30 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>당신의 반응속도는?</title>
 	<link href="logo.ico" rel="shortcut icon" type="image/x-icon">
+	 
+
+<script type="text/javascript">
+	// 마우스오른쪽 클릭방지
+	
+	document.onmousedown=disableclick;
+	
+	status="마우스오른쪽 클릭금지.";
+	
+	function disableclick(event){
+	
+		if (event.button==2) {
+	
+			alert(status);
+	
+			return false;
+	
+		}
+	
+	}
+	</script> 
 </head>
 <body>
+
 	<div>
 	<h3 id="screen" class="waiting">클릭해서 시작하세요.</h3>
 	<script src="Reaction.js"></script>
